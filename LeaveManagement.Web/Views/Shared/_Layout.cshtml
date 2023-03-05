@@ -4,6 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Leave Management:Module</title>
+     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/fontawesome.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LeaveManagement.Web.styles.css" asp-append-version="true" />
     <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
      <link rel="stylesheet" href="/css/siteadmin.css" >
        
@@ -12,7 +18,7 @@
       <link rel="stylesheet" href="/css/all.min.css"  type="text/css">
        
         <link rel="stylesheet" href="/css/sb-admin-2.min.css">
-    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+   
    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
   <link rel="stylesheet" href="~/LeaveManagement.Web.styles.css" asp-append-version="true" />*@
      
@@ -65,7 +71,7 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Leave Components:</h6>
-                            <a class="collapse-item" href="buttons.html">Leave Type</a>
+                        <a class="collapse-item" asp-area="" asp-controller="LeaveTypes" asp-action="Index">Leave Type</a>
                             <a class="collapse-item" href="cards.html">Leave Allocations</a>
                             <a class="collapse-item" href="cards.html">Leave Requests</a>
                               <a class="collapse-item" href="cards.html">Employee Management</a>
@@ -388,10 +394,8 @@
 
                 </div>
                 <!-- End of Main Content -->
-          
-
-            
-            @* <script src="~/js/sb-admin-2.min.js"></script>
+               
+             @*<script src="~/js/sb-admin-2.min.js"></script>
             <script src="~/js/jquery.min.js"></script>
             <script src="~/js/bootstrap.bundle.min.js"></script>
             <script src="~/js/site.js" asp-append-version="true"></script>*@
@@ -404,9 +408,9 @@
                         </div>
                     </div>
                 </footer>
-            @await RenderSectionAsync("Scripts", required: false)
+           
                 <!-- End of Footer -->
-
+               
             </div>
             <!-- End of Content Wrapper -->
 
@@ -438,14 +442,14 @@
         </div>
 
         <!-- Bootstrap core JavaScript-->
-        <script src="~/js/jquery.min.js"></script>
+      @*  <script src="~/js/jquery.min.js"></script>
         <script src="~/js/bootstrap.bundle.min.js"></script>
 
         <!-- Core plugin JavaScript-->
         <script src="~/js/jquery.easing.min.js"></script>
 
         <!-- Custom scripts for all pages-->
-        <script src="~/js/sb-admin-2.min.js"></script>
+        <script src="~/js/sb-admin-2.min.js"></script>*@
 
       
 
@@ -486,6 +490,13 @@
             </div>
         </nav>
     </header>*@
-    
+     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/sweetalert/sweetalert.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
